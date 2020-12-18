@@ -37,6 +37,20 @@ public:
                 _msg[i] = '\0';
     }
 
+    bool isMsgValid(){
+        bool isValid = LOW;
+        if(_msg[0] == 'o' && _msg[1] == 'n'){ 
+            isValid = HIGH;
+        }
+        if(_msg[0] == 'o' && _msg[1] == 'f'){ 
+            isValid = HIGH;
+        }
+        if(_msg[0] == 'b' && _msg[1] == 'l'){ 
+            isValid = HIGH;
+        }
+        return isValid;
+    }
+
     char *getMsg()
     {
         return _msg;
@@ -44,6 +58,14 @@ public:
 
     bool hasNewMsg()
     {
+        if(_hasNewMsg){
+            if(isMsgValid()){
+                return HIGH;
+            } else {
+                clearMsg();
+                return LOW;
+            }
+        }
         return _hasNewMsg;
     }
 
