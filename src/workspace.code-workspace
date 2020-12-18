@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "SimpleStateMachine",
+			"path": ".."
+		},
+		{
+			"name": "OpticalDensityMeter",
+			"path": "../../../../../Desktop/OpticalDensityArduino/OpticalDensityMeter"
+		}
+	],
+	"settings": {}
+}
